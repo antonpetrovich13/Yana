@@ -236,6 +236,9 @@
 		left: 0;
 		background-color: #000;
 	}
+	@media (max-width: 500px) {
+		font-size: 28px;
+	}
 }
 //<PORTFOLIO> ==============================================
 
@@ -433,13 +436,13 @@
 //<SECTIONS> ==============================================
 .sections {
 	background-color: rgba(0, 255, 255, 0.171);
-	padding: 70px 0px;
+	padding: 50px 0px;
 	text-align: center;
 	&__title {
 	}
 
 	&__label {
-		margin: 30px 0px 30px 0px;
+		margin: 30px 0px 50px 0px;
 		font-size: 28px;
 		letter-spacing: 1.5px;
 	}
@@ -447,6 +450,7 @@
 	&__body {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 	}
 
 	&__column {
@@ -454,7 +458,10 @@
 	}
 
 	&__section {
-		margin: 0px 0px 20px 0px;
+		margin: 0px 0px 30px 0px;
+		&:last-child {
+			margin: 0px 0px 0px 0px;
+		}
 	}
 
 	&__text {
@@ -475,6 +482,58 @@
 		}
 		&:hover:after {
 			opacity: 0;
+		}
+	}
+	@media (max-width: 955px) {
+		&__body {
+			flex-wrap: wrap;
+		}
+		&__label {
+			margin: 30px 0px 20px 0px;
+		}
+		&__column {
+			margin: 0 0 5px 0;
+			flex: 0 1 100%;
+		}
+		&__section {
+			margin: 20px 0px;
+			&:last-child {
+				margin: 20px 0px 0px 0px;
+			}
+		}
+	}
+	@media (max-width: 800px) {
+		padding: 30px 0px;
+	}
+	@media (max-width: 700px) {
+		&__label {
+			font-size: 24px;
+		}
+	}
+	@media (max-width: 500px) {
+		&__label {
+			margin: 20px 0px 5px 0px;
+			font-size: 22px;
+			letter-spacing: normal;
+			line-height: 26px;
+		}
+	}
+	@media (max-width: 490px) {
+		&__text {
+			line-height: 23px;
+			&:after {
+				content: "";
+				display: none;
+			}
+		}
+	}
+	@media (max-width: 396px) {
+		&__title {
+			line-height: 30px;
+			&:after {
+				content: "";
+				width: 125%;
+			}
 		}
 	}
 }

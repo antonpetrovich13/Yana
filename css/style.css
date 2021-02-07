@@ -168,48 +168,23 @@ html {
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
       transform: scale(1); }
-  .header__order {
-    position: relative;
-    z-index: 4;
-    display: block;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 700;
-    -webkit-transition: all 0.4s linear 0s;
-    -o-transition: all 0.4s linear 0s;
-    transition: all 0.4s linear 0s;
-    letter-spacing: 1.5px; }
-    .header__order:after {
-      content: "";
-      position: absolute;
-      width: 100%;
-      bottom: -3px;
-      right: 0;
-      -webkit-transition: all 0.4s ease 0s;
-      -o-transition: all 0.4s ease 0s;
-      transition: all 0.4s ease 0s;
-      border-bottom: #fff dashed 2px; }
-    .header__order:hover:after {
-      opacity: 0; }
   @media (max-width: 1170px) {
     .header__menu li {
       margin: 0px 12px; }
       .header__menu li:first-child {
         margin: 0px 12px 0px 0px; }
       .header__menu li:last-child {
-        margin: 0px 0 0px 12px; } }
+        margin: 0px 0px 0px 12px; } }
   @media (max-width: 1070px) {
     .header {
       height: 70px; }
       .header__wrapper {
-        height: 70px; }
-      .header__logo {
-        text-align: left; }
+        height: 70px;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end; }
       .header__burger {
         display: block;
-        -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-        order: 4;
         position: relative;
         width: 30px;
         height: 18px;
@@ -276,9 +251,12 @@ html {
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        overflow: auto; }
+        overflow: auto;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
         .header__menu li {
-          padding: 20px 0px;
+          padding: 25px 0px;
           text-align: center;
           margin: 0px 0px 0px 0px !important; }
       .header__menu.active {
@@ -508,6 +486,9 @@ html {
     bottom: -3px;
     left: 0;
     background-color: #000; }
+  @media (max-width: 500px) {
+    .title {
+      font-size: 28px; } }
 
 .portfolio {
   padding: 50px 0px 70px 0;
@@ -675,10 +656,10 @@ html {
 
 .sections {
   background-color: rgba(0, 255, 255, 0.171);
-  padding: 70px 0px;
+  padding: 50px 0px;
   text-align: center; }
   .sections__label {
-    margin: 30px 0px 30px 0px;
+    margin: 30px 0px 50px 0px;
     font-size: 28px;
     letter-spacing: 1.5px; }
   .sections__body {
@@ -687,13 +668,18 @@ html {
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
   .sections__column {
     -webkit-box-flex: 0;
     -ms-flex: 0 1 50%;
     flex: 0 1 50%; }
   .sections__section {
-    margin: 0px 0px 20px 0px; }
+    margin: 0px 0px 30px 0px; }
+    .sections__section:last-child {
+      margin: 0px 0px 0px 0px; }
   .sections__text {
     position: relative;
     display: inline-block;
@@ -713,3 +699,42 @@ html {
       border-bottom: 2px dashed #af2566; }
     .sections__text:hover:after {
       opacity: 0; }
+  @media (max-width: 955px) {
+    .sections__body {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+    .sections__label {
+      margin: 30px 0px 20px 0px; }
+    .sections__column {
+      margin: 0 0 5px 0;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+      flex: 0 1 100%; }
+    .sections__section {
+      margin: 20px 0px; }
+      .sections__section:last-child {
+        margin: 20px 0px 0px 0px; } }
+  @media (max-width: 800px) {
+    .sections {
+      padding: 30px 0px; } }
+  @media (max-width: 700px) {
+    .sections__label {
+      font-size: 24px; } }
+  @media (max-width: 500px) {
+    .sections__label {
+      margin: 20px 0px 5px 0px;
+      font-size: 22px;
+      letter-spacing: normal;
+      line-height: 26px; } }
+  @media (max-width: 490px) {
+    .sections__text {
+      line-height: 23px; }
+      .sections__text:after {
+        content: "";
+        display: none; } }
+  @media (max-width: 396px) {
+    .sections__title {
+      line-height: 30px; }
+      .sections__title:after {
+        content: "";
+        width: 125%; } }
