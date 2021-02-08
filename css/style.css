@@ -580,7 +580,7 @@ html {
       flex: 0 1 300px; } }
   @media (max-width: 800px) {
     .portfolio {
-      padding: 30px 0px 50px 0px; } }
+      padding: 30px 0px 70px 0px; } }
   @media (max-width: 768px) {
     .portfolio {
       padding: 30px 0px 30px 0px; }
@@ -734,7 +734,8 @@ html {
 .profession {
   padding: 50px 0px;
   background-color: rgba(235, 165, 74, 0.384);
-  text-align: center; }
+  text-align: center;
+  overflow: hidden !important; }
   .profession__label {
     margin: 40px 0px 20px 0px;
     font-size: 24px;
@@ -743,12 +744,74 @@ html {
   .profession__text {
     margin: 10px 0px;
     font-size: 20px;
-    text-align: left; }
+    text-align: left;
+    line-height: 24px; }
   .profession__sublabel {
     margin: 50px 0px 20px 0px;
     font-size: 24px;
     letter-spacing: 1.5px;
     font-weight: 700; }
+  .profession__bottom {
+    margin: 90px 0px 0px 0px;
+    font-size: 24px;
+    line-height: 28px; }
+  .profession__link {
+    position: relative;
+    color: #000;
+    font-weight: 700; }
+    .profession__link:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 1.5px;
+      bottom: 2px;
+      left: 0;
+      background-color: #000;
+      -webkit-transition: all 0.6s ease 0s;
+      -o-transition: all 0.6s ease 0s;
+      transition: all 0.6s ease 0s; }
+    .profession__link:hover:after {
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      opacity: 0; }
+  @media (max-width: 800px) {
+    .profession {
+      padding: 30px 0px; }
+      .profession__label {
+        margin: 30px 0px 15px 0px; }
+      .profession__sublabel {
+        margin: 30px 0px 20px 0px; }
+      .profession__bottom {
+        margin: 70px 0px 0px 0px; } }
+  @media (max-width: 500px) {
+    .profession__label {
+      font-size: 18px;
+      margin: 25px 0px 10px 0px; }
+    .profession__text {
+      margin: 5px 0px; }
+    .profession__sublabel {
+      margin: 20px 0px 15px 0px;
+      font-size: 20px; }
+    .profession__bottom {
+      margin: 55px 0px 0px 0px;
+      font-size: 20px;
+      line-height: 24px; } }
+  @media (max-width: 410px) {
+    .profession__label {
+      margin: 18px 0px 7px 0px;
+      letter-spacing: normal;
+      font-size: 18px;
+      line-height: 22px; }
+    .profession__text {
+      margin: 3px 0px;
+      font-size: 16px;
+      line-height: 20px; }
+    .profession__sublabel {
+      margin: 15px 0px 10px 0px; }
+    .profession__bottom {
+      margin: 45px 0px 0px 0px; } }
 
 .profession-slider {
   display: -webkit-box;
@@ -757,7 +820,7 @@ html {
   position: relative;
   padding: 0px 50px; }
   .profession-slider .slick-arrow {
-    margin: -30px 135px 0 135px;
+    margin: -30px 100px 0 100px;
     position: absolute;
     top: 50%;
     z-index: 10;
@@ -805,15 +868,57 @@ html {
     -ms-flex-pack: center;
     justify-content: center; }
   .profession-slider__image {
+    cursor: pointer;
     -webkit-box-flex: 0;
     -ms-flex: 0 1 700px;
     flex: 0 1 700px; }
     .profession-slider__image img {
       width: 100%; }
-    .profession-slider__image_ex {
+  @media (max-width: 1150px) {
+    .profession-slider .slick-arrow {
+      margin: -30px 50px 0 50px; } }
+  @media (max-width: 1000px) {
+    .profession-slider__image {
       -webkit-box-flex: 0;
-      -ms-flex: 0 1 600px;
-      flex: 0 1 600px; }
+      -ms-flex: 0 1 500px;
+      flex: 0 1 500px; } }
+  @media (max-width: 800px) {
+    .profession-slider .slick-arrow {
+      margin: -30px 30px 0 30px; }
+    .profession-slider .slick-dots {
+      bottom: -40px; }
+    .profession-slider__image {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 400px;
+      flex: 0 1 400px; } }
+  @media (max-width: 600px) {
+    .profession-slider .slick-arrow {
+      margin: -30px 5px 0 5px; }
+    .profession-slider__image {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 350px;
+      flex: 0 1 350px; } }
+  @media (max-width: 500px) {
+    .profession-slider .slick-arrow {
+      margin: -30px 0px 0 0px; }
+    .profession-slider .slick-dots {
+      bottom: -30px; }
+    .profession-slider__image {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 300px;
+      flex: 0 1 300px; } }
+  @media (max-width: 410px) {
+    .profession-slider .slick-dots {
+      bottom: -25px; }
+    .profession-slider__image {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 250px;
+      flex: 0 1 250px; } }
+  @media (max-width: 350px) {
+    .profession-slider__image {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+      flex: 0 1 200px; } }
 
 .direction {
   margin: 80px 0px 50px 0px;
