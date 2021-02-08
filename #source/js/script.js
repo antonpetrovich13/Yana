@@ -30,11 +30,36 @@ $(function () {
 	});
 });
 
-// СЛАЙДЕР
+// СЛАЙДЕР PORTFOLIO
 $(document).ready(function () {
 	$('.portfolio__slider').slick({
 		slidesToShow: 2,
 		slidesToScroll: 2,
+		dots: true,
+		speed: 500,
+		cssEase: 'ease-out',
+		touchThreshold: 10,
+		//centerMode: true,
+		centerPadding: '1px',
+		adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					dots: false,
+				}
+			},
+		]
+	});
+});
+
+// СЛАЙДЕР PROFESSION
+$(document).ready(function () {
+	$('.profession-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
 		dots: true,
 		speed: 500,
 		cssEase: 'ease-out',
