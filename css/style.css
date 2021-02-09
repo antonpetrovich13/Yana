@@ -284,7 +284,7 @@ html {
         padding: 10px 0px 0px 0px; } }
 
 .main {
-  background-color: rgba(199, 118, 156, 0.301);
+  background-color: rgba(199, 118, 156, 0.164);
   padding: 150px 0px 70px 0px;
   height: 100vh; }
   .main__wrap {
@@ -416,7 +416,10 @@ html {
 
 .about {
   padding: 50px 0px;
-  text-align: center; }
+  text-align: center;
+  background: url("../img/about/bg.jpg") center no-repeat;
+  background-size: cover;
+  color: #cecece; }
   .about__body {
     margin: 30px 0px 0px 0px; }
   .about__label {
@@ -435,7 +438,7 @@ html {
     font-size: 22px;
     letter-spacing: 1.5px;
     font-weight: 600;
-    border-bottom: 2px dashed #000; }
+    border-bottom: 2px dashed #cecece; }
   .about__items {
     text-align: left;
     margin: 20px 0px 20px 0px; }
@@ -488,7 +491,8 @@ html {
 
 .portfolio {
   padding: 50px 0px 70px 0;
-  background-color: antiquewhite;
+  background-color: rgba(54, 122, 177, 0.178);
+  background-color: rgba(61, 33, 46, 0.089);
   text-align: center; }
   .portfolio__label {
     margin: 30px 0 50px 0;
@@ -651,7 +655,6 @@ html {
   position: relative; }
 
 .sections {
-  background-color: rgba(0, 255, 255, 0.171);
   padding: 50px 0px;
   text-align: center; }
   .sections__label {
@@ -681,7 +684,7 @@ html {
     display: inline-block;
     font-size: 20px;
     font-weight: 700;
-    color: #af2566; }
+    color: #610532; }
     .sections__text:after {
       content: "";
       position: absolute;
@@ -692,7 +695,7 @@ html {
       -webkit-transition: 0.5s ease 0s;
       -o-transition: 0.5s ease 0s;
       transition: 0.5s ease 0s;
-      border-bottom: 2px dashed #af2566; }
+      border-bottom: 2px solid rgba(97, 5, 49, 0.486); }
     .sections__text:hover:after {
       opacity: 0; }
   @media (max-width: 955px) {
@@ -736,8 +739,11 @@ html {
         width: 125%; } }
 
 .profession {
+  color: #fff;
   padding: 50px 0px;
   background-color: rgba(235, 165, 74, 0.384);
+  background: url("../img/profession/bg1.jpg") center no-repeat;
+  background-size: cover;
   text-align: center;
   overflow: hidden !important; }
   .profession__label {
@@ -761,7 +767,7 @@ html {
     line-height: 28px; }
   .profession__link {
     position: relative;
-    color: #000;
+    color: #fff;
     font-weight: 700; }
     .profession__link:after {
       content: "";
@@ -771,7 +777,7 @@ html {
       height: 1.5px;
       bottom: 2px;
       left: 0;
-      background-color: #000;
+      background-color: #fff;
       -webkit-transition: all 0.6s ease 0s;
       -o-transition: all 0.6s ease 0s;
       transition: all 0.6s ease 0s; }
@@ -1044,7 +1050,10 @@ html {
 
 .useful {
   padding: 50px 0px;
-  text-align: center; }
+  text-align: center;
+  background: url("../img/useful/bg1.jpg") center no-repeat;
+  background-size: cover;
+  color: #fff; }
   .useful__body {
     margin: 50px 0px 0px 0px;
     text-align: left; }
@@ -1058,17 +1067,22 @@ html {
     .useful__text:last-child {
       margin: 17px 0px 0px 0px; }
   .useful__link {
-    color: #000;
+    color: #fff;
     font-weight: 700;
-    border-bottom: 1px solid #000;
-    -webkit-transition: all 1s ease 0s;
-    -o-transition: all 1s ease 0s;
-    transition: all 1s ease 0s; }
-    .useful__link:hover {
-      -webkit-transition: all 0.4s ease 0s;
-      -o-transition: all 0.4s ease 0s;
-      transition: all 0.4s ease 0s;
-      border-bottom: 1px solid #fff; }
+    position: relative; }
+    .useful__link:after {
+      content: "";
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: -2px;
+      left: 0;
+      background-color: #fff; }
+    .useful__link:hover:after {
+      opacity: 0; }
   @media (max-width: 800px) {
     .useful {
       padding: 30px 0px; }
@@ -1079,9 +1093,70 @@ html {
       margin: 12px 0px;
       letter-spacing: 0.5px; } }
 
+.contacts {
+  background-color: rgba(0, 0, 0, 0.651);
+  text-align: center;
+  padding: 50px 0px; }
+  .contacts__title {
+    color: #fff; }
+  .contacts__top {
+    margin: 30px 0px 0px 0px; }
+  .contacts__label {
+    color: #fff;
+    font-size: 22px;
+    letter-spacing: 1px; }
+  .contacts__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 50px -20px 0px -20px; }
+  .contacts__column {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 33.333%;
+    flex: 0 1 33.333%;
+    padding: 0px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .contacts__image {
+    margin: 0px 20px 0px 0px; }
+  .contacts__link {
+    font-size: 20px;
+    color: #fff; }
+  @media (max-width: 770px) {
+    .contacts__wrapper {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+    .contacts__column {
+      margin: 20px 0px;
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+      flex: 0 1 100%; }
+      .contacts__column:first-child {
+        margin: 0px 0px 20px 0px; }
+      .contacts__column:last-child {
+        margin: 20px 0px 0px 0px; } }
+
 .direction {
   padding: 80px 0px 50px 0px;
-  text-align: center; }
+  background: url("../img/direction/bg1.jpg") center no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #cecece; }
+  .direction_d {
+    height: 100vh; }
   .direction__breadcrumbs {
     padding: 60px 0px 0px 0px; }
   .direction__body {
@@ -1133,7 +1208,7 @@ html {
     line-height: 26px; }
     .direction__label a {
       position: relative;
-      color: #000;
+      color: #cecece;
       font-weight: 700; }
       .direction__label a:after {
         content: "";
@@ -1143,7 +1218,7 @@ html {
         height: 1.5px;
         bottom: 2px;
         left: 0;
-        background-color: #000;
+        background-color: #cecece;
         -webkit-transition: all 0.6s ease 0s;
         -o-transition: all 0.6s ease 0s;
         transition: all 0.6s ease 0s; }
@@ -1196,6 +1271,8 @@ html {
   @media (max-width: 600px) {
     .direction {
       padding: 50px 0px 30px 0px; }
+      .direction_p {
+        height: 100vh; }
       .direction__title {
         font-size: 26px;
         letter-spacing: normal; }
