@@ -69,3 +69,18 @@ $(document).ready(function () {
 		adaptiveHeight: true,
 	});
 });
+
+// СЛАЙДЕР DIRECTION
+$(document).ready(function () {
+	$('.direction-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		speed: 500,
+		cssEase: 'ease-out',
+		touchThreshold: 10,
+		//centerMode: true,
+		centerPadding: '1px',
+		adaptiveHeight: true,
+	});
+});
