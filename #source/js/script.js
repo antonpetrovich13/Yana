@@ -1,5 +1,3 @@
-"use strict"
-
 // МЕНЮ-БУРГЕР
 $(document).ready(function () {
 	$('.header__burger').click(function (event) {
@@ -16,16 +14,6 @@ $(document).ready(function () {
 	});
 });
 
-
-
-// ПАРАЛАКС
-$(window).scroll(function (event) {
-	var s = 0 - $(this).scrollTop() / 2;
-	$('.main__mainscreen').css('transform', 'translate3d(0, ' + s + 'px, 0)');
-});
-
-
-
 // ПЛАВНАЯ НАВИГАЦИЯ
 $(function () {
 	$("a[href^='#']").click(function () {
@@ -36,47 +24,63 @@ $(function () {
 	});
 });
 
-
 $(function () {
 	$('.footer__logo').click(function () {
 		$('html, body').animate({ scrollTop: 0 }, 'slow');
 	});
 });
 
-
-// СЛАЙДЕР
-$(window).on('load resize', function () {
-	if ($(window).width() < 600) {
-		$('#slider:not(.slick-initialized)').slick({
-			dots: true,
-			arrows: false,
-			infinite: true,
-			speed: 500,
-			cssEase: 'ease-out',
-			touchThreshold: 10,
-			adaptiveHeight: true,
-			slidesToShow: 1,
-		});
-	} else {
-		$("#slider.slick-initialized").slick("unslick");
-	}
+// СЛАЙДЕР PORTFOLIO
+$(document).ready(function () {
+	$('.portfolio__slider').slick({
+		slidesToShow: 2,
+		slidesToScroll: 2,
+		dots: true,
+		speed: 500,
+		cssEase: 'ease-out',
+		touchThreshold: 10,
+		//centerMode: true,
+		centerPadding: '1px',
+		adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					dots: false,
+				}
+			},
+		]
+	});
 });
 
-
-
-//ПЕРЕДАЧА НАЗВАНИЯ В ФОРМУ
-document.querySelectorAll(".earrings__column").forEach(function (el) {
-	el.addEventListener("click", function (ev) {
-		if (ev.target != el) {
-			var local = el.querySelector(".earrings__label").innerText;
-			localStorage.setItem("productLabel", local);
-		}
+// СЛАЙДЕР PROFESSION
+$(document).ready(function () {
+	$('.profession-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		speed: 500,
+		cssEase: 'ease-out',
+		touchThreshold: 10,
+		//centerMode: true,
+		centerPadding: '1px',
+		adaptiveHeight: true,
 	});
-})
+});
 
-if (document.querySelector(".form__input_data")) {
-	document.querySelector(".form__input_data").value = localStorage.getItem("productLabel");
-}
-
-
-
+// СЛАЙДЕР DIRECTION
+$(document).ready(function () {
+	$('.direction-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		speed: 500,
+		cssEase: 'ease-out',
+		touchThreshold: 10,
+		//centerMode: true,
+		centerPadding: '1px',
+		adaptiveHeight: true,
+	});
+});
