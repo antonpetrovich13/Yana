@@ -24,7 +24,9 @@
 					<li><a href="#portfolio" class="header__link">Портфолио</a></li>
 					<li><a href="#sections" class="header__link">Направления работы</a></li>
 					<li><a href="#profession" class="header__link">Профессия</a></li>
-					<li><a href="#contacts" class="header__link">Контакты</a></li>
+					<li><a href="#parents" class="header__link">Родителям</a></li>
+					<li><a href="#useful" class="header__link">Полезное</a></li>
+					<li><a href="#contacts" class="header__link">Комментарии</a></li>
 				</ul>
 			</div>
 		</div>
@@ -625,27 +627,27 @@
 					</div>
 				</div>
 			</div>
-			<div class="useful">
+			<div id="useful" class="useful">
 				<div class="container">
 					<div class="useful__title title">
 						Полезные ссылки
 					</div>
 					<div class="useful__body">
-						<div class="useful__text"><a href="https://ippk.ru/ " class="useful__link"> ХК ИРО</a>
-						</div>
-						<div class="useful__text"><a href="https://infourok.ru/user/neyman-yana-evgenevna1"
-								class="useful__link">Инфоурок</a>
-						</div>
-						<div class="useful__text"><a href="http://internat10.edu.27.ru/" class="useful__link">КГКОУ ШИ 10</a>
-						</div>
-						<div class="useful__text"><a href="https://ok.ru/miuchitelya" class="useful__link">Сообщество
-								учителей</a>
+						<div class="useful__text"><a href="https://edu.gov.ru/ " class="useful__link">Министерство
+								просвещения</a>
 						</div>
 						<div class="useful__text"><a href="https://minobr.khabkrai.ru/" class="useful__link">Министерство
 								образования</a>
 						</div>
-						<div class="useful__text"><a href="https://edu.gov.ru/ " class="useful__link">Министерство
-								просвещения</a>
+						<div class="useful__text"><a href="https://ippk.ru/ " class="useful__link"> ХК ИРО</a>
+						</div>
+						<div class="useful__text"><a href="http://internat10.edu.27.ru/" class="useful__link">Моя школа</a>
+						</div>
+						<div class="useful__text"><a href="https://infourok.ru/user/neyman-yana-evgenevna1"
+								class="useful__link">Моя страница на платформе "Инфоурок"</a>
+						</div>
+						<div class="useful__text"><a href="https://ok.ru/miuchitelya" class="useful__link">Сообщество
+								учителей</a>
 						</div>
 						<div class="useful__text"><a href="https://www.maam.ru/" class="useful__link">Международный
 								образовательный портал</a>
@@ -703,7 +705,8 @@
 							что бы Вам хотелось увидеть на сайте. Мне очень важно Ваше мнение. Спасибо!
 						</div>
 						<div class="contacts__form form">
-							<form action="#" class="form__body">
+							<form enctype="multipart/form-data" onsubmit="send(event, 'smart.php')" id="form" method="post"
+								class="form__body">
 								<div class="form__item">
 									<div class="form__label">Была ли сайт вам полезен?</div>
 									<div class="options">
@@ -761,8 +764,7 @@
 	</div>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/form.js"></script>
-	<script src="js/form.js"></script>
+<!--<script src="js/form.js"></script>-->
 </body>
 
 </html>
