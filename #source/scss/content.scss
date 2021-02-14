@@ -2,7 +2,6 @@
 .main {
 	background-color: rgba(199, 118, 156, 0.164);
 	padding: 150px 0px 70px 0px;
-	height: 100vh;
 	&__wrap {
 		display: flex;
 		flex-direction: column;
@@ -38,8 +37,8 @@
 	}
 	&__label {
 		text-align: center;
-		font-size: 24px;
-		line-height: 36px;
+		font-size: 30px;
+		line-height: 38px;
 		letter-spacing: 1.5px;
 		font-style: italic;
 		font-weight: 600;
@@ -63,7 +62,7 @@
 			flex: 0 1 250px;
 		}
 		&__label {
-			font-size: 20px;
+			font-size: 22px;
 			line-height: 28px;
 		}
 		&__wrapper {
@@ -72,9 +71,6 @@
 		&__column {
 			padding: 0px 0px 0px 0px;
 		}
-	}
-	@media (max-width: 768px) {
-		height: auto;
 	}
 	@media (max-width: 710px) {
 		padding: 70px 0px 30px 0px;
@@ -104,8 +100,8 @@
 	}
 	&__title {
 		font-weight: 700;
-		font-size: 32px;
-		margin: 0px 0px 20px 0px;
+		font-size: 30px;
+		margin: 0px 0px 18px 0px;
 	}
 	&__text {
 		font-size: 22px;
@@ -129,9 +125,14 @@
 			line-height: 33px;
 		}
 	}
-	@media (max-width: 700px) {
+	@media (max-width: 710px) {
 		&__title {
+			font-size: 24px;
 			margin: 0px 0px 10px 0px;
+		}
+		&__text {
+			font-size: 18px;
+			line-height: 28px;
 		}
 	}
 	@media (max-width: 500px) {
@@ -205,13 +206,15 @@
 		}
 	}
 	@media (max-width: 500px) {
+		&__body {
+			margin: 15px 0px 0px 0px;
+		}
 		&__label {
 			font-size: 18px;
 			letter-spacing: 0.5px;
 			line-height: 22px;
 		}
 		&__points {
-			text-align: center;
 			margin: 20px 0px 0px 0px;
 		}
 		&__point {
@@ -219,7 +222,6 @@
 		}
 		&__items {
 			margin: 15px 0px;
-			text-align: center;
 		}
 	}
 	@media (max-width: 325px) {
